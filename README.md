@@ -2,7 +2,7 @@
 
 Para clonar el repositorio e instalarlo en produccion o pruebas se deben tener en cuenta los siguientes comando:
 
-- [git clone]().
+- [git clone](#).
 
 
 
