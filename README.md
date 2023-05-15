@@ -23,13 +23,13 @@ Para clonar el repositorio e instalarlo en produccion o pruebas se deben tener e
 
 ## Propietarios de la plataforma
 
-Desde el área de Desarrollo Profesional y Egresados, generan la solicitud de esta plataforma para la generacion de los certificados
-para los diferentes cursos que realizan en esta area, siendo principal responsable la compañera Lucero Ruega Garcia y su equipo.
+Desde el área de Desarrollo Profesional y Egresados, realizan la solicitud de esta plataforma para la generación de los certificados
+para los diferentes cursos que realizan en esta área, siendo principal responsable la compañera Lucero Ruega Garcia y su equipo.
 
 ## Documentación del proyecto
 
-El proyecto sera realizado y escrito con el framework laravel aca su documentación: [Laravel documentation](https://laravel.com/docs/).
+El proyecto será realizado y escrito con el framework laravel, esta es su documentación: [Laravel documentation](https://laravel.com/docs/).
 
-## Licensia
+## Licencia
 
-La lataforma cuenta cn la licencia de codigo abierto [MIT license](https://opensource.org/licenses/MIT).
+La plataforma cuenta con la licencia de código abierto [MIT license](https://opensource.org/licenses/MIT).
