@@ -12,12 +12,11 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css?V='.now()->format('H.s')) }}">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css?V='.now()->format('H.s')) }}">
-        <!-- Scripts -->
-        {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
-        <link rel="stylesheet" href="{{ asset('css/app.css?V='.now()->format('H.s')) }}">
+        <link rel="stylesheet" href="{{ asset('css/welcome.css?V='.now()->format('H.s')) }}">
         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css?V='.now()->format('H.s')) }}">
         <link rel="stylesheet" href="{{ asset('css/login.css?V='.now()->format('H.s')) }}">
+        <!-- Scripts -->
+        {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
     <body>
