@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoadController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,4 +26,7 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    Route::resource('/loads', LoadController::class);
+    Route::post('load', [LoadController::class, 'load'])->name('load');
+    Route::get('printPDF', [LoadController::class, 'printPDF'])->name('printPDF');
 });
