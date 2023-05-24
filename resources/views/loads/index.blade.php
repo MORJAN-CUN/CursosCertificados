@@ -64,6 +64,7 @@
                                 <table class="table align-middle table-striped table-hover table-sm mt-3">
                                     <thead>
                                         <tr>
+                                            <th></th>
                                             <th>Nombre estudiante</th>
                                             {{-- <th>tipo_participante</th> --}}
                                             <th>Correo electrónico</th>
@@ -77,8 +78,12 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @php
+                                            $i= 1;
+                                        @endphp
                                         @foreach ($loads as $load)
                                             <tr>
+                                                <td>{{$i}}</td>
                                                 <td>{{$load->nombre_estudiante}}</td>
                                                 {{-- <td>{{$load->tipo_participante}}</td> --}}
                                                 <td>{{$load->email}}</td>
@@ -97,6 +102,9 @@
                                                   </div>
                                                 </td>
                                             </tr>
+                                        @php
+                                            $i += +1;
+                                        @endphp
                                             <!-- showModal -->
                                             <div class="modal fade" id="showModal{{$load->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                               <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
