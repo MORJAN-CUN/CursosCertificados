@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Download;
 use App\Models\Load;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -17,5 +18,6 @@ class DatabaseSeeder extends Seeder
     {
     User::factory(1)->create();
     Load::factory(1000)->create();
+    Download::factory(20)->create();
     }
 }

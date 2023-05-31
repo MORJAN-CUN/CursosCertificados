@@ -215,5 +215,6 @@
   "Loads list": "Lista de cargas realizadas",
   "Load records": "Cargar registros",
   "Load certificate records": "Cargar registros de certificados",
-  "No data to show": "No hay datos para mostrar"
+  "No data to show": "No hay datos para mostrar",
+  "downloaded certificates": "Certificados descargados"
 }

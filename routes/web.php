@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\LoadController;
 use Illuminate\Support\Facades\Route;
 
@@ -27,6 +28,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
     Route::resource('/loads', LoadController::class);
+    Route::resource('/downloads', DownloadController::class);
     Route::post('load', [LoadController::class, 'load'])->name('load');
-    Route::get('printPDF', [LoadController::class, 'printPDF'])->name('printPDF');
+    // Route::get('printPDF', [LoadController::class, 'printPDF'])->name('printPDF');
 });
