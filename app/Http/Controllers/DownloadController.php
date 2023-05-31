@@ -16,8 +16,8 @@ class DownloadController extends Controller
   {
     $loadscount = Download::all();
     $texto = trim($request->get('texto'));
-    $loads = Download::where('nombre_estudiante', 'LIKE', '%' . $texto . '%')
-      ->orWhere('numero_documento', 'LIKE', '%' . $texto . '%')
+    $loads = Download::where('student_name', 'LIKE', '%' . $texto . '%')
+      ->orWhere('document_number', 'LIKE', '%' . $texto . '%')
       ->orderByDesc('id')
       ->paginate(15);
     return view('downloads.index', compact('loadscount', 'texto', 'loads'));
