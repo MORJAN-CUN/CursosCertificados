@@ -32,12 +32,12 @@
             </div>
             <div class="d-flex justify-content-center">
               @if (Route::has('login'))
-              @auth
-              <a href="{{ url('/dashboard') }}" class="mx-3 sombra btn btn-cun btn-sm">{{ __('Dashboard') }}</a>
-              @else
-              <a href="{{ route('login') }}" class="mx-3 sombra btn btn-cun btn-sm">{{ __('Log in') }}</a>
-              <a href="{{ route('register') }}" class="mx-3 sombra btn btn-cun btn-sm">{{ __('Register') }}</a>
-              @endauth
+                @auth
+                <a href="{{ url('/dashboard') }}" class="mx-3 sombra btn btn-cun btn-sm">{{ __('Dashboard') }}</a>
+                @else
+                <a href="{{ route('login') }}" class="mx-3 sombra btn btn-cun btn-sm">{{ __('Log in') }}</a>
+                <a href="{{ route('register') }}" class="mx-3 sombra btn btn-cun btn-sm">{{ __('Register') }}</a>
+                @endauth
               @endif
             </div>
           </div>

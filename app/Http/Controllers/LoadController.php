@@ -39,6 +39,7 @@ class LoadController extends Controller
       ->orWhere('numero_documento', 'LIKE', '%' . $texto . '%')
       ->orderByDesc('id')
       ->paginate(15);
+    
     try {
       Excel::import(new LoadsImport, request()->file('file'));
     } catch (\Throwable $th) {

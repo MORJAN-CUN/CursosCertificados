@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\consultController;
+use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\LoadController;
+use App\Http\Controllers\QrCodeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,18 +18,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+  return view('welcome');
 });
 
+Route::resource('/consult', consultController::class);
+Route::get('/printPDF/{id}', [consultController::class, 'printPDF'])->name('printPDF');
+Route::get('/validateQr/{name}/{document}/{date_realization}', [consultController::class, 'validateQr'])->name('validateQr');
+
 Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
+  'auth:sanctum',
+  config('jetstream.auth_session'),
+  'verified'
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-    Route::resource('/loads', LoadController::class);
-    Route::post('load', [LoadController::class, 'load'])->name('load');
-    Route::get('printPDF', [LoadController::class, 'printPDF'])->name('printPDF');
+  Route::get('/dashboard', function () {
+    return view('dashboard');
+  })->name('dashboard');
+  Route::resource('/loads', LoadController::class);
+  Route::resource('/downloads', DownloadController::class);
+  Route::post('load', [LoadController::class, 'load'])->name('load');
+  // Route::get('printPDF', [LoadController::class, 'printPDF'])->name('printPDF');
 });
