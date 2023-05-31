@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Download;
+<<<<<<< HEAD
+=======
+use App\Models\Load;
+>>>>>>> Andres
 use Illuminate\Http\Request;
 
 class DownloadController extends Controller
@@ -12,10 +16,23 @@ class DownloadController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+<<<<<<< HEAD
     public function index()
     {
         //
     }
+=======
+    public function index(Request $request)
+  {
+    $loadscount = Download::all();
+    $texto = trim($request->get('texto'));
+    $loads = Download::where('nombre_estudiante', 'LIKE', '%' . $texto . '%')
+      ->orWhere('numero_documento', 'LIKE', '%' . $texto . '%')
+      ->orderByDesc('id')
+      ->paginate(15);
+    return view('downloads.index', compact('loadscount', 'texto', 'loads'));
+  }
+>>>>>>> Andres
 
     /**
      * Show the form for creating a new resource.

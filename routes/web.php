@@ -1,6 +1,9 @@
 <?php
 
+<<<<<<< HEAD
 use App\Http\Controllers\consultController;
+=======
+>>>>>>> Andres
 use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\LoadController;
 use App\Http\Controllers\QrCodeController;
@@ -30,6 +33,7 @@ Route::middleware([
   config('jetstream.auth_session'),
   'verified'
 ])->group(function () {
+<<<<<<< HEAD
   Route::get('/dashboard', function () {
     return view('dashboard');
   })->name('dashboard');
@@ -37,4 +41,13 @@ Route::middleware([
   Route::resource('/downloads', DownloadController::class);
   Route::post('load', [LoadController::class, 'load'])->name('load');
   // Route::get('printPDF', [LoadController::class, 'printPDF'])->name('printPDF');
+=======
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+    Route::resource('/loads', LoadController::class);
+    Route::resource('/downloads', DownloadController::class);
+    Route::post('load', [LoadController::class, 'load'])->name('load');
+    // Route::get('printPDF', [LoadController::class, 'printPDF'])->name('printPDF');
+>>>>>>> Andres
 });

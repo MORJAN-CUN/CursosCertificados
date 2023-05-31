@@ -18,9 +18,9 @@
           <x-jet-nav-link href="{{ route('loads.index') }}" :active="request()->routeIs('loads.*')">
             {{ __('Load records') }}
           </x-jet-nav-link>
-          {{-- <x-jet-nav-link href="{{ route('listarRegistros') }}" :active="request()->routeIs('listarRegistros')">
-            {{ __('List records') }}
-          </x-jet-nav-link> --}}
+          <x-jet-nav-link href="{{ route('downloads.index') }}" :active="request()->routeIs('downloads.*')">
+            {{ __('downloaded certificates') }}
+          </x-jet-nav-link>
           {{-- <x-jet-nav-link href="{{ route('reportes') }}" :active="request()->routeIs('reportes')">
             {{ __('Reports') }}
           </x-jet-nav-link> --}}
@@ -156,15 +156,15 @@
       <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
         {{ __('Dashboard') }}
       </x-jet-responsive-nav-link>
-      {{-- <x-jet-nav-link href="{{ route('index') }}" :active="request()->routeIs('index')">
-        {{ __('Manage Files') }}
-      </x-jet-nav-link>
-      <x-jet-nav-link href="{{ route('listarRegistros') }}" :active="request()->routeIs('listarRegistros')">
-        {{ __('List records') }}
-      </x-jet-nav-link>
-      <x-jet-nav-link href="{{ route('reportes') }}" :active="request()->routeIs('reportes')">
+      <x-jet-responsive-nav-link href="{{ route('loads.index') }}" :active="request()->routeIs('loads.*')">
+        {{ __('Load records') }}
+      </x-jet-responsive-nav-link>
+      <x-jet-responsive-nav-link href="{{ route('downloads.index') }}" :active="request()->routeIs('downloads.*')">
+        {{ __('downloaded certificates') }}
+      </x-jet-responsive-nav-link>
+      {{--<x-jet-responsive-nav-link href="{{ route('reportes') }}" :active="request()->routeIs('reportes')">
         {{ __('Reports') }}
-      </x-jet-nav-link> --}}
+      </x-jet-responsive-nav-link> --}}
     </div>
 
     <!-- Responsive Settings Options -->
