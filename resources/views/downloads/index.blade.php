@@ -72,6 +72,7 @@
                                     <td>
                                         <div class="btn-group" role="group" aria-label="Basic example">
                                             <a class="sombra btn btn-info" href="#showModal{{ $load->id }}" data-bs-toggle="modal"><i class="bi bi-eye"></i></a>
+                                            <a class="sombra btn btn-info" href="#showModal{{ $load->id }}" data-bs-toggle="modal"><i class="bi bi-pencil"></i></a>
                                         </div>
                                     </td>
                                 </tr>
