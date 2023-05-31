@@ -22,6 +22,7 @@ class DownloadController extends Controller
       ->orderByDesc('id')
       ->paginate(15);
     return view('downloads.index', compact('loadscount', 'texto', 'loads'));
+
   }
 
     /**
