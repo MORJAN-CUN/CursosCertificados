@@ -3,10 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Download;
-<<<<<<< HEAD
-=======
-use App\Models\Load;
->>>>>>> Andres
 use Illuminate\Http\Request;
 
 class DownloadController extends Controller
@@ -16,12 +12,6 @@ class DownloadController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-<<<<<<< HEAD
-    public function index()
-    {
-        //
-    }
-=======
     public function index(Request $request)
   {
     $loadscount = Download::all();
@@ -33,7 +23,7 @@ class DownloadController extends Controller
     return view('downloads.index', compact('loadscount', 'texto', 'loads'));
 
   }
->>>>>>> Andres
+
 
     /**
      * Show the form for creating a new resource.
