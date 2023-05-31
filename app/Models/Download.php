@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Download extends Model
 {
-<<<<<<< HEAD
   use HasFactory;
 
   protected $fillable = [
@@ -23,7 +22,4 @@ class Download extends Model
     'city_expedition',
     'download_date',
   ];
-=======
-    use HasFactory;
->>>>>>> Andres
 }
