@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Imports\LoadsImport;
+use App\Mail\LoadMailable;
 use App\Models\Load;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 use Maatwebsite\Excel\Facades\Excel;
 
 class LoadController extends Controller
@@ -39,14 +42,23 @@ class LoadController extends Controller
       ->orWhere('numero_documento', 'LIKE', '%' . $texto . '%')
       ->orderByDesc('id')
       ->paginate(15);
-    
+
     try {
       Excel::import(new LoadsImport, request()->file('file'));
     } catch (\Throwable $th) {
       return redirect()->route('loads.index', compact('loadscount', 'texto', 'loads'))->dangerBanner('Archivo no cargado, revisar por que: ' . $th);
     }
-    return redirect()->route('loads.index', compact('loadscount', 'texto', 'loads'))->banner('Registro cargado exitosamente.');
-  }
+
+    $receivers = Load::pluck('email');
+    // return $receivers;
+
+    try {
+        Mail::to($receivers)->send(new LoadMailable());
+      } catch (\Throwable $th) {
+        return redirect()->route('loads.index', compact('loadscount', 'texto', 'loads'))->dangerBanner($th->getMessage());
+        }
+      return redirect()->route('loads.index', compact('loadscount', 'texto', 'loads'))->banner('Registro cargado exitosamente.');
+    }
   /**
    * Show the form for creating a new resource.
    *
