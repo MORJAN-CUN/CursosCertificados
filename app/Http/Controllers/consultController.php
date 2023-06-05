@@ -195,22 +195,12 @@ class consultController extends Controller
     $nameParam = $request->name;
     $realizationParam = $request->date_realization;
     $consParam = $request->consecutive;
-    // $certifiedValidate = Download::where([
-    //   ['document_number', '=', $documentParam],
-    //   ['student_name', '=', $nameParam],
-    //   ['date_realized', '=', $realizationParam],
-    //   ['consecutive', '=', $consParam],
-    // ])->get();
+
 
     $certifiedValidate = Download::where('document_number', $documentParam)
       ->where('student_name', $nameParam)
       ->where('date_realized', $realizationParam)
-      ->where('consecutive', $consParam)->get();
-
-    // return $certifiedValidate;
-    // $cert_Valid = Download::where('document_number', $request->document)->get();
-    // return $cert_Valid;
-    // $recived = $request->name . "/" . $request->document;
+    ->where('consecutive', $consParam)->get();
     return view('students.validateQr', compact('certifiedValidate'));
   }
   /**
