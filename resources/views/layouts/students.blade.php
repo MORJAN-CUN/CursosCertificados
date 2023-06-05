@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
-  <title>{{ config('app.name', 'Cursos Certificados'." - ".env('APP_VERSION', '1.0')) }}</title>
+  <title>{{ config('app.name', 'Cursos Certificados')." - ".env('APP_VERSION', '1.0') }}</title>
   <!-- favicon -->
   <link rel="shortcut icon" href="{{ asset('images/icono-cun.png') }}" type="image/x-icon">
   <!-- Fonts -->

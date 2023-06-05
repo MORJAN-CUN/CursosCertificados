@@ -15,7 +15,7 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-md-8 py-2">
-                              <strong>{{__('Records in database')}}</strong>
+                              <strong>{{__('load file')}}</strong>
                             </div>
                             <div class="col-md-4 flex-row-reverse">
                             </div>
@@ -41,7 +41,7 @@
                 <div class="card bg-light ">
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-md-6">{{__('Records in database') .": ". count($loadscount)}}</div>
+                            <div class="col-md-6">{{__('Records loads in database') .": ". count($loadscount)}}</div>
                             <div class="col-md-6">
                             <form action="" method="get">
                                 <div class="form-row flex-row-reverse">

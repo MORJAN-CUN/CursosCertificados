@@ -25,6 +25,7 @@ class CreateDownloadsTable extends Migration
       $table->string('duration');
       $table->string('modality');
       $table->string('city_expedition');
+      $table->string('consecutive');
       $table->date('download_date');
       $table->timestamps();
     });

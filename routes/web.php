@@ -23,7 +23,7 @@ Route::get('/', function () {
 
 Route::resource('/consult', consultController::class);
 Route::get('/printPDF/{id}', [consultController::class, 'printPDF'])->name('printPDF');
-Route::get('/validateQr/{name}/{document}/{date_realization}', [consultController::class, 'validateQr'])->name('validateQr');
+Route::get('/validateQr/{name}/{document}/{date_realization}/{consecutive}', [consultController::class, 'validateQr'])->name('validateQr');
 
 Route::middleware([
   'auth:sanctum',
