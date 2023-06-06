@@ -13,15 +13,22 @@ class LoadMailable extends Mailable
 {
     use Queueable, SerializesModels;
 
-
+    public $nombre;
+    public $curso;
+    public $day_r,$month_r,$year_r;
+    
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($nombre,$curso,$day_r,$month_r,$year_r)
     {
-
+      $this->nombre = $nombre;
+      $this->curso = $curso;
+      $this->day_r = $day_r;
+      $this->month_r = $month_r;
+      $this->year_r = $year_r;
     }
 
     /**
@@ -31,6 +38,7 @@ class LoadMailable extends Mailable
      */
     public function build()
     {
-        return $this->view('mails.mailsLoads');
+        return $this->subject('Tu certificado de asistencia está listo: ¡Accede ahora!')
+                    ->view('mails.mailsLoads');
     }
 }

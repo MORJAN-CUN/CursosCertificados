@@ -6,6 +6,7 @@ use App\Imports\LoadsImport;
 use App\Mail\LoadMailable;
 use App\Models\Load;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
@@ -49,16 +50,29 @@ class LoadController extends Controller
       return redirect()->route('loads.index', compact('loadscount', 'texto', 'loads'))->dangerBanner('Archivo no cargado, revisar por que: ' . $th);
     }
 
-    $receivers = Load::pluck('email');
-    // return $receivers;
+    
+    // AQUI SE EXTRAE LA INFROMACION DE LA TABLA PARA TRAER LOS CAMPOS EMAIL,NOMBRE,CURSO,FECHAREALIZACION.
+    $loads = DB::table('loads')->select('email','nombre_estudiante','nombre_producto','fecha_realización')->distinct()->get();
+    foreach ($loads as $load){
+      $mail = $load->email;
+      $nombre = $load->nombre_estudiante;
+      $curso = $load->nombre_producto;
 
-    try {
-        Mail::to($receivers)->send(new LoadMailable());
+      // FORMATEAMOS FECHA REALIZACION DEL CURSO COPIA
+      $day_r = Carbon::parse($load->fecha_realización)->format('d');
+      $dateMonth = Carbon::parse($load->fecha_realización)->locale('es');
+      $month_r = $dateMonth->monthName;
+      $year_r = Carbon::parse($load->fecha_realización)->format('Y');
+
+      try {
+          Mail::to($mail)->queue(new LoadMailable($nombre,$curso,$day_r,$month_r,$year_r));
       } catch (\Throwable $th) {
-        return redirect()->route('loads.index', compact('loadscount', 'texto', 'loads'))->dangerBanner($th->getMessage());
-        }
-      return redirect()->route('loads.index', compact('loadscount', 'texto', 'loads'))->banner('Registro cargado exitosamente.');
+          return $th->getMessage();
+          return redirect()->route('loads.index', compact('loadscount', 'texto', 'loads'))->dangerBanner('Email no se envio, verificar!.');
+      }
     }
+    return redirect()->route('loads.index', compact('loadscount', 'texto', 'loads'))->banner('Registro cargado exitosamente.');
+  }
   /**
    * Show the form for creating a new resource.
    *
