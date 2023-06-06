@@ -23,14 +23,17 @@
   <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css?V='.now()->format('H.s')) }}">
   <link rel="stylesheet" href="{{ asset('css/files.css?V='.now()->format('H.s')) }}">
   <link rel="stylesheet" href="{{ asset('css/inputs.css?V='.now()->format('H.s')) }}">
+  <link rel="stylesheet" href="{{ asset('css/carga.css?V='.now()->format('H.s')) }}">
   @livewireStyles
   <!-- Scripts -->
   {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
 </head>
 
-<body class="font-sans antialiased">
+<body class="font-sans antialiased" onbeforeunload="return ocultar()">
   <x-jet-banner />
-
+  <div id="container_load">
+    <div id="load"></div>
+  </div>
   <div class="min-h-screen gradient">
     @livewire('navigation-menu')
 
@@ -49,6 +52,19 @@
 
   @stack('modals')
   @livewireScripts
+  <script>
+    window.onload = function() {
+      var container_load = document.getElementById('container_load');
+      container_load.style.visibility = 'hidden';
+      container_load.style.opacity = '0';
+    }
+
+    function mostrar() {
+      var container_load = document.getElementById('container_load');
+      container_load.style.visibility = 'visible';
+      container_load.style.opacity = '1';
+    }
+  </script>
   <script src="{{ asset('js/app.js') }}"></script>
   <script src="{{ asset('js/script.js') }}"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

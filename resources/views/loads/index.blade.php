@@ -29,7 +29,7 @@
                                 <div class="row">
                                     <x-file></x-file>
                                     <div class="col-md-4">
-                                        <button class="sombra btn btn-success ml-4" width="50%" type="submit">{{__('Load certificate records')}}</button>
+                                        <button class="sombra btn btn-success ml-4" width="50%" type="submit" onclick="mostrar()">{{__('Load certificate records')}}</button>
                                     </div>
                                 </div>
                                 {{-- <a class="sombra btn btn-warning ml-4" width="50%" href="#">{{__('Export User Data')}}</a> --}}
