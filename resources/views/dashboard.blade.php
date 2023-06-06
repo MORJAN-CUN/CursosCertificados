@@ -15,14 +15,14 @@
           {{__('Parrafo')}}
         </p>
         <p>
-          {{__('Enlace Credenciales')}} <a href="#">Aquí.</a>
+          {{__('Enlace Credenciales')}} <a href="{{route('loads.index')}}">Aquí.</a>
         </p>
         <p>
-          Para ver los registros de los alumnos da clic <a href="#">Aquí.</a>
+          Para ver los registros de los certificados descargados da clic <a href="{{route('downloads.index')}}">Aquí.</a>
         </p>
-        <p>
+        {{-- <p>
           Para generar reportes da clci <a href="#">Aquí.</a>
-        </p>
+        </p> --}}
       </div>
     </div>
   </div>

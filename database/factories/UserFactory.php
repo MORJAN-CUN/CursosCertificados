@@ -32,8 +32,8 @@ class UserFactory extends Factory
     //     'remember_token' => Str::random(10),
     // ];
     return [
-      'name' => "Nelson Andres Cardenas Velasquez",
-      'email' => "nelson_cardenas@cun.edu.co",
+      'name' => "Janluy Leonardo Moreno Coronado",
+      'email' => "janluy_moreno@cun.edu.co",
       'email_verified_at' => now(),
       'password' => '$2y$10$tuwBCH5h5lSZ5stdny/81u/F0cRlow.gPud.zip8giLI7JRpTEjZK', // password
       'remember_token' => Str::random(10),

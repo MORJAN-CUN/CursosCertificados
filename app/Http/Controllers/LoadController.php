@@ -37,6 +37,10 @@ class LoadController extends Controller
    */
   public function load(Request $request)
   {
+    // VALIDACIO DEL CAMPO QUE TRAE EL ARCHIVO DESDE EL FORMULARIO
+    $request->validate([
+      'file' => 'required'
+    ]);
     $texto = trim($request->get('texto'));
     $loadscount = Load::all();
     $loads = Load::where('nombre_estudiante', 'LIKE', '%' . $texto . '%')

@@ -71,3 +71,11 @@
 .show>.btn-cun.dropdown-toggle:focus {
   box-shadow: 0 0 0 .2rem rgba(12, 80, 132, .5)
 }
+
+.error {
+  margin-top: 1rem;
+  font-size: large;
+  color: red;
+  font-weight: bold;
+  content: '\e8c2';
+}
