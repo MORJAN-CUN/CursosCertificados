@@ -45,8 +45,7 @@
                 <div class="col-md-12 mt-2 t2">
                     Por su participación en el <b>“{{ $product_name }}”</b>, con una<br>
                     intensidad de {{ $duration }} horas; realizada el {{ $day_r }} de {{ $month_r }} del
-                    {{ $year_r }},
-                    por modalidad {{ $modality }}.
+                    {{ $year_r }}, por modalidad {{ $modality }}.
                 </div>
 
                 <div class="col-md-12 mt-2 t3">

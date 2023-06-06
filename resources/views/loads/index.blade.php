@@ -27,10 +27,13 @@
                                 <form action="{{route('load')}}" method="POST" enctype="multipart/form-data" novalidate>
                                 @csrf
                                 <div class="row">
-                                    <x-file></x-file>
-                                    <div class="col-md-4">
-                                        <button class="sombra btn btn-success ml-4" width="50%" type="submit">{{__('Load certificate records')}}</button>
-                                    </div>
+                                  <x-file></x-file>
+                                  <div class="col-md-4">
+                                    <button class="sombra btn btn-success ml-4" width="50%" type="submit">{{__('Load certificate records')}}</button>
+                                  </div>
+                                  @error('file')
+                                    <div class="error">{{ $message }}</div>
+                                  @enderror
                                 </div>
                                 {{-- <a class="sombra btn btn-warning ml-4" width="50%" href="#">{{__('Export User Data')}}</a> --}}
                                 </form>

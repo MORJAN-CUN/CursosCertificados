@@ -33,13 +33,17 @@ class LoadController extends Controller
    */
   public function load(Request $request)
   {
+    // VALIDACIO DEL CAMPO QUE TRAE EL ARCHIVO DESDE EL FORMULARIO
+    $request->validate([
+      'file' => 'required'
+    ]);
     $texto = trim($request->get('texto'));
     $loadscount = Load::all();
     $loads = Load::where('nombre_estudiante', 'LIKE', '%' . $texto . '%')
       ->orWhere('numero_documento', 'LIKE', '%' . $texto . '%')
       ->orderByDesc('id')
       ->paginate(15);
-    
+
     try {
       Excel::import(new LoadsImport, request()->file('file'));
     } catch (\Throwable $th) {
