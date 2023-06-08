@@ -11,7 +11,7 @@ Para clonar el repositorio e instalarlo en produccion o pruebas se deben tener e
 - [crear archivo .env a partir del archivo de ejemplo](#).
 - **[cp .env.example .env](#)**
 - [Generar llave de aplicacion para que no de error](#).
-- **[php artisan key:generate](#)**r
+- **[php artisan key:generate](#)**
 - [Asignar credenciales de conexion a la DB, usuario y contraseña, en archivo .env ](#).
 - **[DB_DATABASE=Database name](#)**
 - **[DB_USERNAME=user database name](#)**
