@@ -35,7 +35,7 @@ El proyecto será realizado y escrito con el framework laravel, esta es su docum
 La plataforma cuenta con la licencia de código abierto [MIT license](https://opensource.org/licenses/MIT).
 
 ## Migrar versión de laravel 8 a laravel 9
-Asegurarse de estar usando una versión de php mayor a 8.
+Asegurarse de estar usando una versión de php mayor o igual a 8.
 
 1. **"require"** dependencies
 
