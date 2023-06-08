@@ -35,17 +35,18 @@ El proyecto será realizado y escrito con el framework laravel, esta es su docum
 La plataforma cuenta con la licencia de código abierto [MIT license](https://opensource.org/licenses/MIT).
 
 ## Migrar versión de laravel 8 a laravel 9
+Asegurarse de estar usando una versión de php mayor a 8.
 
 1. **"require"** dependencies
 
    - Modificar la versión de **"php"** a **"^8.0"**
    - Modificar la versión de **"laravel/framework"** a **"^9.0"**
-   - Adecuar las versiones de las librerías a **php 8**.
+   - Adecuar las versiones de las librerías a **php 8**. (Opcional)
 
-   Para este proyecto:
+    Para este proyecto:
 
-   - Modificar la versión de **"maatwebsite/excel"** a **"^3.1.48"**
-   - Modificar la versión de **"simplesoftwareio/simple-qrcode"** a **"^4.2"**
+   - Modificar la versión de **"maatwebsite/excel"** a **"^3.1.48"** (Opcional)
+   - Modificar la versión de **"simplesoftwareio/simple-qrcode"** a **"^4.2"** (Opcional)
 
 2. **"require-dev"** dependencies
 
