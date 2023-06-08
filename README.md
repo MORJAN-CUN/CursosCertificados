@@ -1,4 +1,4 @@
-## Comandos para clonar plataforma de Cursos Certificados 
+## Comandos para clonar plataforma de Cursos Certificados
 
 Para clonar el repositorio e instalarlo en produccion o pruebas se deben tener en cuenta los siguientes comando:
 
@@ -33,3 +33,28 @@ El proyecto será realizado y escrito con el framework laravel, esta es su docum
 ## Licencia
 
 La plataforma cuenta con la licencia de código abierto [MIT license](https://opensource.org/licenses/MIT).
+
+## Migrar versión de laravel 8 a laravel 9
+
+1. **"require"** dependencies
+
+   - Modificar la versión de **"php"** a **"^8.0"**
+   - Modificar la versión de **"laravel/framework"** a **"^9.0"**
+   - Adecuar las versiones de las librerías a **php 8**.
+
+   Para este proyecto:
+
+   - Modificar la versión de **"maatwebsite/excel"** a **"^3.1.48"**
+   - Modificar la versión de **"simplesoftwareio/simple-qrcode"** a **"^4.2"**
+
+2. **"require-dev"** dependencies
+
+   - Reemplazamos **"facade/ignition": "^2.5",** por **"spatie/laravel-ignition": "^1.0",**
+   - Modificar la versión de **"nunomaduro/collision"** a **"^6.1"**
+
+3. Activar extensiones en **C:\xamp\php\php.ini**
+
+   - Borramos el **;** de **extension=zip**
+   - Borramos el **;** de **extension=gd**
+
+4. Ejecutar **composer update**
