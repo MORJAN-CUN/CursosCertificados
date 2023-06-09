@@ -34,12 +34,12 @@
         <div class="jumbotron">
           <p>Hola!</p>
           <p>Estimado/a <strong>{{ $nombre }}</strong>,</p>
-        </div>  
+        </div>
           <ul>
 
         <p>
           Esperamos que te encuentres bien. En nombre de Desarrollo Profesional y Egresados de la CUN, queremos agradecerte
-          por tu participación en nuestra reciente actividad <strong>{{ $curso }}</strong> realizada el {{ $day_r }} de 
+          por tu participación en nuestra reciente actividad <strong>{{ $curso }}</strong> realizada el {{ $day_r }} de
           {{ $month_r }} del {{ $year_r }},. Nos complace informarte que tu certificado de asistencia ya está disponible.
         </p>
         <p>
@@ -48,7 +48,7 @@
         </p>
         <p>
           Para acceder a tu certificado de asistencia, simplemente haz clic en el siguiente enlace:
-            <a href="http://127.0.0.1:8000/consult">
+            <a href="{{ env('APP_URL') }}consult">
                   Dale Clik Aqui
             </a>
           Te recomendamos descargar y guardar una copia electrónica de tu certificado para futuras referencias.
@@ -75,6 +75,6 @@
       </div>
     </div>
   </div>
-      
+
 </body>
 </html>
