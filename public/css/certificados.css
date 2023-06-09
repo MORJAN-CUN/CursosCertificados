@@ -6,7 +6,8 @@
 
 
 body, html {
-  background-image: url('http://localhost/CursosCertificados/public/images/certificados/fondo-certificado.jpg') !important;
+  background-image: url('https://cursoscertificados.cunapp.dev/images/certificados/fondo-certificado.jpg') !important;
+  /* background-image: url('http://localhost/CursosCertificados/public/images/certificados/fondo-certificado.jpg') !important; */
   background-size: 100% auto !important;
   margin: 0cm 0cm 0cm 0cm;
   background-repeat: no-repeat !important;
