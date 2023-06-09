@@ -18,7 +18,7 @@
         .nombre{
           font-family: 'Montserrat', sans-serif;
           font-style: italic;
-          font-size: 38px;
+          font-size: 36px;
         }
         .titulo{
           font-style: bold;
