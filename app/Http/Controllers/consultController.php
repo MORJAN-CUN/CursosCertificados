@@ -149,7 +149,7 @@ class consultController extends Controller
 
     $url_validate = $base . "validateQr/" . $name . "/" . $document .  "/" . $date_realization . "/" . $consecutive;
     // DEFINMOS LAS CARACTERISTICAS DEL QR
-    $qr = QrCode::size(100)->backgroundColor(143, 218, 0, 25)->color(31, 41, 54)
+    $qr = QrCode::size(80)->backgroundColor(255, 255, 255, 25)->color(31, 41, 54)
     ->margin(2)->generate($url_validate);
     // PASAMOS LOS DEMAS PARAMETROS PARA GENERAR EL CERTIFICADO
     $cons = now()->format('Ym');

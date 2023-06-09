@@ -1,20 +1,18 @@
 /*
-      #1f2936
-      #8fda00
-      #FFCD00
-      */
-@page {
-  margin: 0cm 0cm;
-  font-family: 'comic Sans Ms';
+  #1f2936
+  #8fda00
+  #FFCD00
+*/
+
+
+body, html {
+  background-image: url('http://localhost/CursosCertificados/public/images/certificados/fondo-certificado.jpg') !important;
+  background-size: 100% auto !important;
+  margin: 0cm 0cm 0cm 0cm;
+  background-repeat: no-repeat !important;
 }
 
-/* body {
-      background-image: url('{{ env('APP_URL') }}/images/certificados/fondo-certificado.jpg') !important;
-      background-size: 98% auto !important;
-      margin: 0.1cm 0.1cm 0.1cm 0.1cm;
-      background-repeat: no-repeat !important;
-    } */
-header {
+/* header {
   position: fixed;
   top: 0cm;
   left: 0cm;
@@ -25,23 +23,23 @@ header {
   text-align: center;
   line-height: 30px;
   flex-wrap: wrap;
-}
+} */
 
-.t1 {
+/* .t1 {
   font-size: 24px;
-  font-family: 'monospace;
+  font-family: 'italic';
 
-}
+} */
 
-.t2 {
+/* .t2 {
   font-size: 20px;
 }
 
 .t3 {
   font-size: 18px;
-}
+} */
 
-.green-right {
+/* .green-right {
   color: #8fda00;
   background-color: #8fda00 !important;
   -moz-transform: scale(2.5) rotate(42deg) translate(50px, -50px) skew(-21deg, -20deg);
@@ -49,9 +47,9 @@ header {
   -o-transform: scale(2.5) rotate(42deg) translate(50px, -50px) skew(-21deg, -20deg);
   -ms-transform: scale(2.5) rotate(42deg) translate(50px, -50px) skew(-21deg, -20deg);
   transform: scale(2.5) rotate(42deg) translate(50px, -80px) skew(-21deg, -20deg);
-}
+} */
 
-.yellow-right {
+/* .yellow-right {
   z-index: -1 !important;
   color: #FFCD00;
   background-color: #FFCD00 !important;
@@ -60,46 +58,14 @@ header {
   -o-transform: scale(2.5) rotate(42deg) translate(50px, -50px) skew(-21deg, -20deg);
   -ms-transform: scale(2.5) rotate(42deg) translate(50px, -50px) skew(-21deg, -20deg);
   transform: scale(2.5) rotate(42deg) translate(50px, -70px) skew(-21deg, -20deg);
-}
-
-footer {
-  position: fixed;
-  bottom: 0cm;
-  left: 0cm;
-  right: 0cm;
-  height: 1.5cm;
-  background-color: #1f2936;
-  color: #8fda00;
-  text-align: center;
-  line-height: 35px;
-}
+} */
 
 .div-img {
-  display: block;
-  justify-content: left;
-  margin: 0 auto;
+  padding: 1%;
+  z-index: 2 !important;
 }
 
 main {
-  background-color: #ffffff !important;
   z-index: 3 !important;
-  margin-top: 2cm !important;
-}
-
-.firma-left {
-  width: 250px;
-  height: 100px;
-  /* background-color: rgb(215, 230, 10); */
-  float: left;
-  border-bottom: 2px solid rgb(0, 0, 0);
-  margin-bottom: 2.5cm !important;
-}
-
-.firma-right {
-  width: 250px;
-  height: 100px;
-  /* background-color: rgb(24, 20, 238); */
-  float: right;
-  border-bottom: 2px solid rgb(0, 0, 0);
-  margin-bottom: 2.5cm !important;
+  margin-top: 0.5cm !important;
 }
