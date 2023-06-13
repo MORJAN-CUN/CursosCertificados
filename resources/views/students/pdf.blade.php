@@ -13,7 +13,7 @@
     <style>
         body {
           font-family: 'Montserrat', sans-serif;
-          font-size: 18px;
+          font-size: 22px;
         }
         .nombre{
           font-family: 'Montserrat', sans-serif;
@@ -22,7 +22,7 @@
         }
         .titulo{
           font-style: bold;
-          font-size: 20px;
+          font-size: 23px;
         }
     </style>
   </head>
@@ -30,14 +30,14 @@
 <body>
     <header class="text-center">
       <div class="div-img">
-        <img src="{{ env('APP_URL') }}images/logo-cun-certificado.png" alt="cun-logo" width="100">
+        <img src="{{ env('APP_URL') }}images/logo-cun-certificado.png" alt="cun-logo" width="300">
       </div>
     </header>
 
     <main>
       <div class="container">
         <div class="row text-center">
-          <div class="col-md-12 mt-0 ">
+          <div class="col-lg-12 mt-2 titulo">
             <b>
               La Corporación Unificada Nacional de Educación Superior – CUN
             </b>
@@ -81,7 +81,7 @@
     </main>
 
     <footer>
-      <div class="text-center p-3">
+      <div class="text-center p-3 titulo">
         <h2>{{ $consecutive }}</h2>
       </div>
     </footer>

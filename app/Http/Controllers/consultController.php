@@ -149,7 +149,7 @@ class consultController extends Controller
 
     $url_validate = $base . "validateQr/" . $name . "/" . $document .  "/" . $date_realization . "/" . $consecutive;
     // DEFINMOS LAS CARACTERISTICAS DEL QR
-    $qr = QrCode::size(80)->backgroundColor(255, 255, 255, 25)->color(31, 41, 54)
+    $qr = QrCode::size(110)->backgroundColor(255, 255, 255, 25)->color(31, 41, 54)
     ->margin(2)->generate($url_validate);
     // PASAMOS LOS DEMAS PARAMETROS PARA GENERAR EL CERTIFICADO
     $cons = now()->format('Ym');
@@ -176,7 +176,7 @@ class consultController extends Controller
         'watermark'
       )
     );
-    $pdf->setPaper('A5', 'landscape');
+    $pdf->setPaper('A4', 'landscape');
     return $pdf->download($name . "-" . $document . '.pdf');
     // return "entro=>" . $entro . "<br>dia realizacion=>" . $day_r . "<br>mes realizacion=>" . $month_r . "<br>año realizacion=>" . $year_r . "<br>nombre estudiante=>" . $name
     // . "<br>documento estudiante=>" . $document . "<br>fecha realizacion=>" . $date_realization . "<br>consecutivo=>" . $consecutive . "<br> url del qr=>" . $url_validate
