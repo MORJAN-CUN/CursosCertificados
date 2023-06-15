@@ -1,6 +1,6 @@
 ## Comandos para clonar plataforma de Cursos Certificados 
 
-Para clonar el repositorio e instalarlo en produccion o pruebas se deben tener en cuenta los siguientes comando:
+Para clonar el repositorio e instalarlo en produccion o pruebas se deben tener en cuenta los siguientes comandos:
 
 - [Clonar el repositorio](#).
 - **[https://github.com/MORJAN-CUN/CursosCertificados.git](#)**
@@ -24,7 +24,7 @@ Para clonar el repositorio e instalarlo en produccion o pruebas se deben tener e
 ## Propietarios de la plataforma
 
 Desde el área de Desarrollo Profesional y Egresados, realizan la solicitud de esta plataforma para la generación de los certificados
-para los diferentes cursos que realizan en esta área, siendo principal responsable la compañera Lucero Ruega Garcia y su equipo.
+para los diferentes cursos que realizan en esta área, siendo principal responsable la compañera Lucero Rueda Garcia y su equipo.
 
 ## Documentación del proyecto
 
