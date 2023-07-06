@@ -9,14 +9,14 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class LoadMailable extends Mailable
+class LoadMailable extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
     public $nombre;
     public $curso;
     public $day_r,$month_r,$year_r;
-    
+
     /**
      * Create a new message instance.
      *

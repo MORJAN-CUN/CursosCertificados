@@ -54,9 +54,10 @@ class LoadController extends Controller
       return redirect()->route('loads.index', compact('loadscount', 'texto', 'loads'))->dangerBanner('Archivo no cargado, revisar por que: ' . $th);
     }
 
-    
+
     // AQUI SE EXTRAE LA INFROMACION DE LA TABLA PARA TRAER LOS CAMPOS EMAIL,NOMBRE,CURSO,FECHAREALIZACION.
-    $loads = DB::table('loads')->select('email','nombre_estudiante','nombre_producto','fecha_realización')->distinct()->get();
+    // $loads = DB::table('loads')->select('email','nombre_estudiante','nombre_producto','fecha_realización')->distinct()->get();
+    $loads = Load::select('email', 'nombre_estudiante', 'nombre_producto', 'fecha_realización')->distinct()->cursor();
     foreach ($loads as $load){
       $mail = $load->email;
       $nombre = $load->nombre_estudiante;
@@ -69,7 +70,8 @@ class LoadController extends Controller
       $year_r = Carbon::parse($load->fecha_realización)->format('Y');
 
       try {
-          Mail::to($mail)->queue(new LoadMailable($nombre,$curso,$day_r,$month_r,$year_r));
+        // Mail::to($mail)->queue(new LoadMailable($nombre,$curso,$day_r,$month_r,$year_r));
+        Mail::to($mail)->send(new LoadMailable($nombre, $curso, $day_r, $month_r, $year_r));
       } catch (\Throwable $th) {
           return $th->getMessage();
           return redirect()->route('loads.index', compact('loadscount', 'texto', 'loads'))->dangerBanner('Email no se envio, verificar!.');
